@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Hackerchan",
+  "version": "1.0",
+  "description": "Flatten Hacker News comments into chronological order",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://news.ycombinator.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
